@@ -24,17 +24,18 @@
         enabled:  yes
 
     - name: Create Application Database
-      mysql_db: name=employee_db state=present
+      mysql_db: name=employee_db state=present login_user={{ root }} login_password={{ w }}
 
     - name: Create Database user
       mysql_user:
-        login_user: root
-        login_password: w
         name: db_user
         password: w
         priv: '*.*:ALL'
         state: present
         host: '%'
+        state: present
+        login_user: root
+        login_password: w
 
     - name: Install Python Flask Dependency
       pip:
