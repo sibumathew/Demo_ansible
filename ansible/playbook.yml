@@ -27,6 +27,7 @@
       mysql_db:
         login_user: root
         login_password: ''
+        host_all: yes
         name: employee_db
         state: present
 
