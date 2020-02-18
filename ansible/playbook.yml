@@ -33,7 +33,6 @@
         priv: '*.*:ALL'
         state: present
         host: '%'
-        state: present
         login_user: root
         login_password: w
 
