@@ -28,8 +28,10 @@
 
     - name: Create Database user
       mysql_user:
+        login_user: root
+        login_password: w
         name: db_user
-        password: Passw0rd
+        password: w
         priv: '*.*:ALL'
         state: present
         host: '%'
